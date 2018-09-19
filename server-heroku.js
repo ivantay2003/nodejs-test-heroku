@@ -17,6 +17,14 @@ app.set ('view engine','hbs')
 //    })
 //});
 
+app.get ('/projects', (req, res) => {
+    
+    res.render('projects.hbs', {
+        
+        pageTitle : 'Projects'
+    });
+});
+
 app.use (express.static(__dirname + '/public'));
 
 app.use ((req, res, next) => {
